@@ -83,6 +83,16 @@ function Chat({ id }) {
         setInput('')
     }
 
+    const createChat = () => {
+        const roomName = prompt("Please enter a name for chatroom")
+
+        if (roomName) {
+            db.collection('rooms').add({
+                name: roomName
+            })
+        }
+    }
+
     return (
         <div className="chat">
             <div className="chat__header">
@@ -110,6 +120,9 @@ function Chat({ id }) {
                         ))}
                         </Select>
                     </FormControl>
+                    <div onClick={createChat} className="mobileChatAdd">
+                        <h2>Add new chat</h2>
+                    </div>
                 </div>
 
                 <div className="chat__headerRight">
