@@ -69,12 +69,6 @@ function Chat({ id }) {
     const sendMessage = async (e) => {
         e.preventDefault();
 
-        await axios.post('/api/messages/new', {
-            message: input,
-            name: "User",
-            timestamp: "Just now",
-            received: false
-        })
         db.collection('rooms').doc(roomId).collection('messages').add({
             message: input,
             name: user.displayName,

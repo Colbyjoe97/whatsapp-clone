@@ -22,3 +22,9 @@ a {
     text-decoration: none !important;
     color: black;
 }
+
+@media (max-width: 1000px) {
+    .computerView {
+        display: none;
+    }
+}

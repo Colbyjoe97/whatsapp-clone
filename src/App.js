@@ -13,14 +13,6 @@ function App() {
   const [messages, setMessages] = useState([])
 
   useEffect(() => {
-    axios.get('/api/messages/all')
-      .then(response => {
-        // console.log("Response: ", response)
-        setMessages(response.data.results)
-      })
-  }, [])
-
-  useEffect(() => {
     const pusher = new Pusher('4eefa8127dd75938c541', {
       cluster: 'us2'
     });
