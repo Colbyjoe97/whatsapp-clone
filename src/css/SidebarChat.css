@@ -24,7 +24,7 @@ a {
 }
 
 @media (max-width: 1000px) {
-    .computerView {
+    .sidebarChat__lastMessage {
         display: none;
     }
 }
